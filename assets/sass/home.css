@@ -363,6 +363,7 @@ a {
   background-color: white;
   display: none;
   z-index: 1;
+  position: absolute;
 }
 
 .header-third-part .col-6 .search-input-category-btn .dropdown-cate .dropdown-content-cate a {
@@ -435,10 +436,6 @@ a {
   padding-top: 40px;
 }
 
-.first-part-body .a {
-  z-index: -1;
-}
-
 .first-part-body .a .page {
   width: 100%;
   height: 431px;
@@ -489,5 +486,33 @@ a {
   text-decoration: none;
   color: white;
   cursor: pointer;
+}
+
+.owl-carousel-slider {
+  padding-top: 50px;
+}
+
+.owl-carousel-slider .item {
+  position: relative;
+}
+
+.owl-carousel-slider .cate-name {
+  position: absolute;
+  width: 200px;
+  bottom: 30px;
+  left: 25px;
+  background-color: white;
+  text-align: center;
+  height: 30px;
+  padding-top: 3px;
+}
+
+.owl-carousel-slider .cate-name a {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 16px;
+  display: block;
 }
 /*# sourceMappingURL=home.css.map */

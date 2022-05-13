@@ -373,6 +373,7 @@ a{
                     background-color:white;
                     display: none;
                     z-index: 1;
+                    position: absolute;
                   
                     
                     
@@ -463,7 +464,7 @@ a{
 .first-part-body{
     padding-top: 40px;
     .a{
-        z-index: -1;
+        // z-index: -1;
        
        
         .page{
@@ -531,6 +532,35 @@ a{
     }
    
     
+}
+
+.owl-carousel-slider{
+    padding-top:50px;
+
+    .item{
+        position:relative;
+    }
+   
+    .cate-name {
+        
+        position:absolute;
+        width:200px;
+        bottom:30px;
+        left: 25px;
+        background-color:white;
+        text-align: center;
+        height:30px;
+        padding-top:3px;
+
+        a{
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing:1px;
+            font-size:16px;
+            display: block;
+        }
+    }
 }
 
 
