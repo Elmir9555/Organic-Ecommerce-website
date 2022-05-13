@@ -362,6 +362,7 @@ a {
   line-height: 35px;
   background-color: white;
   display: none;
+  z-index: 1;
 }
 
 .header-third-part .col-6 .search-input-category-btn .dropdown-cate .dropdown-content-cate a {
@@ -428,5 +429,65 @@ a {
 .header-third-part .phone-icon .phone .support {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.4);
+}
+
+.first-part-body {
+  padding-top: 40px;
+}
+
+.first-part-body .a {
+  z-index: -1;
+}
+
+.first-part-body .a .page {
+  width: 100%;
+  height: 431px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #F5F5F5;
+  border: none;
+  position: relative;
+}
+
+.first-part-body .a .page .content-btn {
+  position: absolute;
+  left: 60px;
+  top: 70px;
+}
+
+.first-part-body .a .page .content-btn .fruit {
+  color: #7fad39;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.first-part-body .a .page .content-btn .vegetable-cnt {
+  font-weight: bold;
+  font-size: 45px;
+  width: 300px;
+  line-height: 55px;
+}
+
+.first-part-body .a .page .content-btn .free {
+  color: rgba(0, 0, 0, 0.5);
+  margin-top: 15px;
+}
+
+.first-part-body .a .page .content-btn .shopnow {
+  background-color: #7fad39;
+  border: none;
+  width: 150px;
+  height: 40px;
+  font-weight: bold;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.first-part-body .a .page .content-btn .shopnow a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
 }
 /*# sourceMappingURL=home.css.map */

@@ -33,7 +33,10 @@
 
    $("#all-categ").click(function(){
      $(".dropdown-content-cate").toggle(800);
+    
    })
+
+  
   
   });
 
