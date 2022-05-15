@@ -1981,18 +1981,31 @@ $(document).ready(function() {
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
         loop:true,
-        margin:10,
+        margin:30,
         nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        smartSpeed:1500,
+        animateIn:'linear',
+        animateOut:'linear',
         responsive:{
             0:{
                 items:1
             },
             600:{
-                items:3
+                items:2
             },
             1000:{
-                items:5
+                items:3
             }
         }
     })
+})
+
+$(document).ready(function() {
+    $("#default").click(function() {
+        $(".sort-content").toggle();
+    });
+
+
 })

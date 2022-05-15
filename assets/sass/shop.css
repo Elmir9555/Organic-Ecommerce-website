@@ -716,6 +716,177 @@ a {
   background-color: #7fad39;
 }
 
+.filter-product .sale-products .picture {
+  height: 270px;
+  width: 270px;
+  position: relative;
+}
+
+.filter-product .sale-products .picture a {
+  color: black;
+}
+
+.filter-product .sale-products .picture:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter-product .sale-products .picture:hover .icons div {
+  display: block;
+}
+
+.filter-product .sale-products .picture .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+}
+
+.filter-product .sale-products .picture .icons .detail-icon i {
+  padding-left: 5px;
+}
+
+.filter-product .sale-products .picture .icons .basket-icon i {
+  padding-top: 6px;
+}
+
+.filter-product .sale-products .picture .icons .heart-icon {
+  padding-left: 12px;
+}
+
+.filter-product .sale-products .picture .icons div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 39px;
+  height: 39px;
+  border-radius: 39px;
+  padding-top: 5px;
+  padding-left: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.filter-product .sale-products .picture .icons div:hover {
+  background-color: #7fad39;
+  cursor: pointer;
+}
+
+.filter-product .sale-products .picture .icons div:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter-product .sale-products .picture .icons div i {
+  font-size: 13px;
+}
+
+.filter-product .sale-products .picture .cate-name {
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 100;
+  font-size: 16px;
+  height: 20px;
+}
+
+.filter-product .sale-products .picture .name {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.filter-product .sale-products .picture .name a {
+  text-decoration: none;
+  color: black;
+}
+
+.filter-product .sale-products .picture .price {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.filter-product .sale-products .picture .price span {
+  text-decoration: line-through;
+  font-weight: 300;
+  font-size: 13px;
+  margin-left: 10px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.filter-product .sale-products .owl-nav {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.filter-product .sale-products .owl-next {
+  margin-left: 30px;
+}
+
+.filter-product .sale-products .owl-next span {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.filter-product .sale-products .owl-next span:hover {
+  background-color: #7fad39;
+  color: white;
+}
+
+.filter-product .sale-products .owl-prev span {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+}
+
+.filter-product .sale-products .owl-prev span:hover {
+  background-color: #7fad39;
+  color: white;
+}
+
+.filter-product .sort-by-product-count .sortby #default {
+  border: none;
+  width: 80px;
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: white;
+}
+
+.filter-product .sort-by-product-count .sortby .sort-content {
+  width: 80px;
+  min-height: 90px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 73px;
+}
+
+.filter-product .sort-by-product-count .sortby .sort-content a {
+  text-decoration: none;
+  color: black;
+  font-size: 13px;
+  display: block;
+  height: 30px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.filter-product .sort-by-product-count .sortby .sort-content a:hover {
+  background-color: #7fad39;
+  color: white;
+  padding-left: 10px;
+}
+
 .footer {
   background-color: #F3F6FA;
   padding-top: 40px;
