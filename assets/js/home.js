@@ -71,14 +71,16 @@
 
  //tab-menu -start
   let catnames =document.querySelectorAll(".category-name div")
- let content = document.querySelectorAll(".picture")
+ let content = document.querySelectorAll(".product-image .row")
 
- console.log(content);
+ 
 
 
   catnames.forEach(catname => {
-    catname.addEventListener("click",function(){   
-      let actived=document.querySelector(".active");
+    catname.addEventListener("click",function(){ 
+        
+      let actived=document.querySelector(".category-name .active");
+      console.log(actived);
       actived.classList.remove("active");
       this.classList.add("active");
 
@@ -90,12 +92,41 @@
         else{
           contnt.classList.remove("d-none")
         }
+
+
       })
    
-      
-
 
     })
     
   });
  //tab-menu end
+
+
+ //start sliders col-6
+
+
+
+ $('.owl-carousel').owlCarousel({
+
+  nav:true,
+  // Infinity:true,
+  autoplay:true,
+  autoplayTimeout:1000,
+  responsive:{
+      0:{
+          items:1
+      },
+      600:{
+          items:3
+      },
+      1000:{
+          items:5
+      }
+  }
+})
+ 
+ //end sliders col-6
+
+
+
