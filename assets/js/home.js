@@ -80,7 +80,6 @@
     catname.addEventListener("click",function(){ 
         
       let actived=document.querySelector(".category-name .active");
-      console.log(actived);
       actived.classList.remove("active");
       this.classList.add("active");
 

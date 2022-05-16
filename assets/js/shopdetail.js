@@ -46,5 +46,31 @@ $(document).ready(function(){
     $(this).addClass("active");
   })
 
+ 
+
 })
+
+
+let btn=document.querySelectorAll(".center span")
+let content=document.querySelectorAll(".tab-menu .description")
+
+
+btn.forEach(btns=>{
+  btns.addEventListener("click",function(){
+
+    
+    content.forEach(contnt=>{
+      if(this.getAttribute("data-id")!=contnt.getAttribute("data-id")){
+        contnt.classList.add("d-none");
+      }
+      else{
+        contnt.classList.remove("d-none");
+      }
+    })
+   
+  })
+})
+
+
+
 
