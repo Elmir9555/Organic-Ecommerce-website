@@ -2,7 +2,6 @@
 $(document).ready(function(){
 
     $(".dropbtns").click(function(){
-      console.log("salam");
       $("#myDropdown").toggle(1000);
     });
   
@@ -39,3 +38,13 @@ $(document).ready(function(){
 
 
   //end searchfilter
+
+
+$(document).ready(function(){
+  $("span").click(function(){
+    $(".active").removeClass("active");
+    $(this).addClass("active");
+  })
+
+})
+
