@@ -855,6 +855,19 @@ a {
   color: white;
 }
 
+.filter-product .sort-by-product-count {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-product .sort-by-product-count .sortby span {
+  font-weight: 200;
+}
+
 .filter-product .sort-by-product-count .sortby #default {
   border: none;
   width: 80px;
@@ -864,17 +877,23 @@ a {
   background-color: white;
 }
 
+.filter-product .sort-by-product-count .sortby #default #icon {
+  font-size: 14px;
+  margin-left: 5px;
+}
+
 .filter-product .sort-by-product-count .sortby .sort-content {
   width: 80px;
   min-height: 90px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   margin-left: 73px;
+  display: none;
 }
 
 .filter-product .sort-by-product-count .sortby .sort-content a {
   text-decoration: none;
   color: black;
-  font-size: 13px;
+  font-size: 14px;
   display: block;
   height: 30px;
   padding-left: 10px;
@@ -887,11 +906,154 @@ a {
   padding-left: 10px;
 }
 
+.filter-product .sort-by-product-count .product-count span {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+.filter-product .products {
+  margin-top: 40px;
+}
+
+.filter-product .products .picture {
+  height: 270px;
+  width: 270px;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.filter-product .products .picture a {
+  color: black;
+}
+
+.filter-product .products .picture:hover {
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter-product .products .picture:hover .icons div {
+  display: block;
+}
+
+.filter-product .products .picture .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 60px;
+}
+
+.filter-product .products .picture .icons .detail-icon i {
+  padding-left: 5px;
+}
+
+.filter-product .products .picture .icons .basket-icon i {
+  padding-top: 6px;
+}
+
+.filter-product .products .picture .icons .heart-icon {
+  padding-left: 12px;
+}
+
+.filter-product .products .picture .icons div {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 39px;
+  height: 39px;
+  border-radius: 39px;
+  padding-top: 5px;
+  padding-left: 10px;
+  background-color: white;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.filter-product .products .picture .icons div:hover {
+  background-color: #7fad39;
+  cursor: pointer;
+}
+
+.filter-product .products .picture .icons div:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+  color: white;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.filter-product .products .picture .icons div i {
+  font-size: 13px;
+}
+
+.filter-product .products .picture .name {
+  text-align: center;
+  padding-top: 15px;
+}
+
+.filter-product .products .picture .name a {
+  text-decoration: none;
+  color: black;
+}
+
+.filter-product .products .picture .price {
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.filter-product .pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 27px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+.filter-product .pagination div {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+  padding-left: 9px;
+  font-size: 14px;
+  padding-top: 3px;
+  font-weight: bold;
+}
+
+.filter-product .pagination div:hover {
+  color: white;
+  background-color: #7fad39;
+  cursor: pointer;
+  border: none;
+  padding-left: 10px;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+}
+
+.filter-product .pagination div:focus {
+  color: #7fad39;
+}
+
+.filter-product .pagination .active {
+  color: white;
+  background-color: #7fad39;
+  border: none;
+}
+
 .footer {
   background-color: #F3F6FA;
   padding-top: 40px;
   height: 280px;
-  margin-top: 270px;
+  margin-top: 120px;
 }
 
 .footer .adress-link-subs .adress-phone-mail {

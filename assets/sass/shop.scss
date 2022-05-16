@@ -926,8 +926,11 @@ a{
     }
 
     .sort-by-product-count{
+        display: flex;
+        justify-content: space-between;
         .sortby{
             span{
+                font-weight: 200;
 
             }
 
@@ -938,6 +941,12 @@ a{
                 font-size: 16px;
                 font-weight: bold;
                 background-color:white;
+
+                #icon{
+                    font-size: 14px;
+                    margin-left:5px;
+                    
+                }
             }
 
             .sort-content{
@@ -945,12 +954,14 @@ a{
                 min-height: 90px;
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 margin-left: 73px;
+                display:none;
+
                 
                 
                 a{
                     text-decoration: none;
                     color: black;
-                    font-size: 13px;
+                    font-size: 14px;
                     display:block;
                     height: 30px;
                     padding-left: 10px;
@@ -965,6 +976,165 @@ a{
                 }
             }
         }
+
+        .product-count{
+            span{
+               
+                color: rgba(0, 0, 0, 0.2);
+                font-size: 16px;
+                margin-left: 10px;
+
+            }
+        }
+    }
+
+    .products{
+
+        margin-top: 40px;
+        
+        .picture{
+            height: 270px;
+            width: 270px;           
+           position:relative;
+           margin-bottom: 80px;
+
+           a{
+               color: black;
+           }
+
+           &:hover{
+            transition: all 0.5s;
+           
+            .icons{
+                div{
+                    display: block;
+
+                }
+              
+                
+            }
+           }
+
+          
+
+           .icons{
+               display: flex;
+               gap: 20px;
+               position:absolute;
+               bottom:20px;
+               left: 60px;
+
+               
+
+               .detail-icon{
+                   i{
+                       padding-left:5px;
+                   }
+               }
+               .basket-icon{
+                   i{
+                    padding-top:6px;
+                   }
+               }
+               .heart-icon{
+                padding-left: 12px;
+               }
+
+               div{
+                   border: 1px solid rgba(0,0,0,0.1);
+                   width: 39px;
+                   height: 39px;
+                   border-radius:39px;
+                   padding-top:5px;
+                   padding-left: 10px;
+                   background-color:white;
+                   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                   display:none;
+                   
+                   &:hover{
+                       background-color:$primaryBtn;
+                       cursor: pointer;
+                       
+
+                       i{
+                           transform:rotate(360deg);
+                           color:white;
+                           transition: all 0.5s;
+                       }
+                   }
+
+                   
+
+                   i{
+                       font-size:13px;
+                       
+                   }
+               }
+           }
+
+           .name {
+               text-align: center;
+               padding-top:15px;
+
+               a{
+                   text-decoration:none;
+                   color:black;
+               }
+           }
+           .price{
+               font-weight: bold;
+               text-align: center;
+               font-size: 16px;
+               letter-spacing:1px;
+
+           }
+           
+          
+        }
+    }
+
+    .pagination{
+        display:flex;
+        justify-content:center;
+        gap: 27px;
+        padding-left: 20px;
+        padding-top: 20px;
+
+        div{
+            width: 30px;
+            height: 30px;
+           
+            border:none;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            color: rgba(0, 0, 0, 0.3);
+            padding-left: 9px;
+            font-size:14px;
+            padding-top: 3px;
+            font-weight: bold;
+
+            &:hover {
+                color: white;
+                background-color:$primaryBtn;
+                cursor: pointer;
+                border:none;
+                padding-left: 10px;
+                transition: all 0.7s;
+
+            }
+            &:focus{
+                color: $primaryBtn;
+            }
+
+            
+        }
+
+        .active{
+            color: white;
+            background-color:$primaryBtn;
+            border: none;
+        }
+
+        
     }
 }
 
@@ -983,7 +1153,7 @@ a{
     background-color:#F3F6FA;
     padding-top: 40px;
     height: 280px;
-    margin-top:270px;
+    margin-top:120px;
 
    
    
