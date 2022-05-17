@@ -72,5 +72,39 @@ btn.forEach(btns=>{
 })
 
 
+//increase count
+
+// let minus=document.querySelector(".minus");
+let plus=document.querySelector(".plus");
+let i=Number(document.querySelector(".cnt").innerText);
+
+// console.log(cont);
+
+
+// minus.addEventListener("click",function(){
+
+//  console.log(cont+=1);
+  
+ 
+// })
+
+// const myfunction=function(){
+  
+// };
+
+plus.addEventListener("click",function(){
+  for (let i = 0; i < 100; i++) {
+    
+    
+    
+  }
+})
+
+
+
+//increase count
+
+
+
 
 
