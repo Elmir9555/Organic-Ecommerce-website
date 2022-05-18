@@ -2,6 +2,7 @@
 $(document).ready(function(){
 
     $(".dropbtns").click(function(){
+      console.log("salam");
       $("#myDropdown").toggle(1000);
     });
   
@@ -40,39 +41,7 @@ $(document).ready(function(){
   //end searchfilter
 
 
-$(document).ready(function(){
-  $("span").click(function(){
-    $(".active").removeClass("active");
-    $(this).addClass("active");
-  })
-
- 
-
-})
-
-
-let btn=document.querySelectorAll(".center span")
-let content=document.querySelectorAll(".tab-menu .description")
-
-
-btn.forEach(btns=>{
-  btns.addEventListener("click",function(){
-
-    
-    content.forEach(contnt=>{
-      if(this.getAttribute("data-id")!=contnt.getAttribute("data-id")){
-        contnt.classList.add("d-none");
-      }
-      else{
-        contnt.classList.remove("d-none");
-      }
-    })
-   
-  })
-})
-
-
-//increase count
+  //increase count
 
 let minus=document.querySelector(".minus");
 let plus=document.querySelector(".plus");
@@ -104,8 +73,3 @@ plus.addEventListener("click",function(){
 
 
 //increase count
-
-
-
-
-
