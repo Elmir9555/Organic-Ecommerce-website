@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300&family=Dosis:wght@600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./assets/sass/blogdetail.css">
+    <title>Blog Page</title>
+</head>
+
+<body>
+
+
+    <!-- start header -->
+    <header>
+        <div class="header-first-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mail-order">
+                            <ul>
+                                <li>
+                                    <i class="fas fa-envelope"></i>
+                                    elmiriu@code.edu.az
+                                </li>
+                                <li>
+                                    Free Shipping for all Order of $99
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="col-6 ">
+                        <div class="right-first-header">
+                            <div class="exchange-login-social">
+                                <ul>
+                                    <li class="social">
+                                        <a href="">
+                                            <i class="fab fa-facebook-f"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fab fa-linkedin-in"></i>
+                                        </a>
+                                        <a href="">
+                                            <i class="fab fa-pinterest-p"></i>
+                                        </a>
+                                    </li>
+
+                                    <li class="exchange">
+
+
+                                        <div class="dropdown">
+                                            <button class="dropbtn">English <i class="fas fa-angle-down"></i></button>
+                                            <div class="dropdown-content">
+                                                <a href="#">English</a>
+                                                <a href="#">Spain</a>
+
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="login">
+                                        <div class="login-icon">
+                                            <i class="fas fa-user"></i>
+                                            <span>Login</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-second-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <div class="ogani">
+                            <img src="./assets/img/logo.png" alt="ogani" href="home.html">
+
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                <a href="#" id="drop">HOME</a>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><a href="#" id="drop">SHOP</a></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Shop Details</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <button class="dropbtn"><a href="#" id="drop">BLOG</a></button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Blog Details</a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" id="drop">CONTACT</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-3">
+                        <div class="basket-heart-price">
+
+
+                            <span class="heart">
+                                <span class="heart-count">
+                                    1
+                                </span>
+                                <a href="#">
+                                    <i class="fas fa-heart"></i>
+                                </a>
+                            </span>
+
+
+                            <span class="basket">
+                                <span class="basket-count">
+                                    1
+                                </span>
+                                <a href="#">
+                                    <i class="fas fa-shopping-basket"></i>
+                                </a>
+                            </span>
+
+
+
+                            <span class="price">
+
+                                <span>item:</span><strong>$150.00</strong>
+
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-third-part">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12">
+                        <div class="dropdown">
+                            <button class="dropbtns"><i class="fas fa-bars"></i>
+                                <span>All Categories</span>
+                                <i class="fas fa-angle-down"></i>
+                            </button>
+                            <div id="myDropdown" class="dropdown-content">
+                                <a href="#home">Fresh Meats</a>
+                                <a href="#about">Vegetables</a>
+                                <a href="#contact">Fruits</a>
+                                <a href="#about">Fresh Berries</a>
+                                <a href="#about">Ocean Foods</a>
+                                <a href="#about">Butter & Eggs</a>
+                                <a href="#about">Fastfoods</a>
+                                <a href="#about">Drinks</a>
+                                <a href="#about">Nut Gifts</a>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-sm-12">
+                        <div class="search-input-category-btn d-flex">
+                            <div class="dropdown-cate">
+                                <button id="all-categ">All Categories <i class="fas fa-angle-down"></i></button>
+                                <div class="dropdown-content-cate">
+                                    <a href="#home">Fresh Meats</a>
+                                    <a href="#about">Vegetables</a>
+                                    <a href="#contact">Fruit</a>
+                                    <a href="#about">Fresh Berries</a>
+                                    <a href="#about">Ocean Foods</a>
+                                    <a href="#about">Butter & Eggs</a>
+                                    <a href="#about">Fastfood</a>
+                                    <a href="#about">Fresh Onion</a>
+                                    <a href="#about">Nut Gifts</a>
+
+                                </div>
+
+                            </div>
+                            <div>
+                                <input type="text" placeholder="What do you u need?">
+                                <button id="search">Search</button>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        <div class="phone-icon">
+                            <div class="icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+
+                            <div class="phone">
+                                <div class="number">
+                                    +994 50 450 95 55
+                                </div>
+                                <div class="support">
+                                    support 24/7 time
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- End-header -->
+
+    <!-- Start-body -->
+    <main>
+        <section id="background-potatoes">
+            <div class="background-potatoes">
+                <div class="img">
+                    <img src="./assets/img/potatoes-background.jpeg" style="width: 100%;height: 100%;" alt="">
+
+                </div>
+                <div class="name">
+                    <p>BlogDetail </p>
+                    <span> <a href="./home.html"> <strong>Home</strong> </a> -->BlogDetail </span>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <section id="blogdetail">
+            <div class="blogdetail">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <div class="filter-search">
+                                <div class="search">
+                                    <input type="text" placeholder="Search...">
+                                    <span class="search-icon"><i class="fas fa-search"></i></span>
+                                </div>
+                            </div>
+    
+                            <div class="categories-title">
+                                Categories
+                            </div>
+    
+                            <div class="categories-name">
+                                <div>
+                                    <a href="">
+    
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="">All</a>
+                                </div>
+                                <div>
+                                    <a href="">Fresh Meats (20)</a>
+                                </div>
+                                <div>
+                                    <a href="">Vegetables (10)</a>
+                                </div>
+                                <div>
+                                    <a href="">Fruits (25)</a>
+                                </div>
+                                <div>
+                                    <a href="">Fresh Berries (5)</a>
+                                </div>
+    
+                                <div>
+                                    <a href="">Ocean Food (30)</a>
+                                </div>
+                            </div>
+    
+                            <div class="recent-news">
+                               Recent News
+                            </div>
+    
+                            <div class="image-content-date">
+                                <div class="img">
+                                    <img src="./assets/img/strawberry.jpeg" style="width: 100%;height: 100%;"alt="strawberry">
+                                </div>
+    
+                                <div class="content-date">
+                                    <div class="content">
+                                     <a href=""> 09 Kinds Of Vegetables Protect The Liver</a>   
+                                    </div>
+                                    <div class="date">
+                                        MAR 05,2022
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-content-date">
+                                <div class="img">
+                                    <img src="./assets/img/vegetable.jpeg" style="width: 100%;height: 100%;"alt="strawberry">
+                                </div>
+    
+                                <div class="content-date">
+                                    <div class="content">
+                                     <a href=""> Tips You To Balance Nutrition Meal Day</a>   
+                                    </div>
+                                    <div class="date">
+                                        MAR 05,2022
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-content-date">
+                                <div class="img">
+                                    <img src="./assets/img/strawberry.jpeg" style="width: 100%;height: 100%;"alt="strawberry">
+                                </div>
+    
+                                <div class="content-date">
+                                    <div class="content">
+                                     <a href=""> 4 Principles Help You Lose Weight With Vegetables</a>   
+                                    </div>
+                                    <div class="date">
+                                        MAR 05,2022
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="recent-news">
+                                Search  By
+                             </div>
+    
+                             <div class="product-name">
+                                 <div class="up">
+                                    <span><a href="">Apple</a> </span>
+                                    <span><a href="">Banana</a> </span>
+                                    <span><a href="">Strawberry</a></span>
+                                 </div>
+                            
+                                 <div class="down">
+                                    <span><a href="">Meat</a></span>
+                                    <span><a href="">Fish</a></span>
+                                    <span><a href="">Orange</a></span>
+                                 </div>
+                             
+                             </div>
+    
+                        </div>
+
+                        <div class="col-lg-8 col-sm-12">
+                            <div class="img-st">
+                                <img src="./assets/img/strawberry1.jpeg" style="width: 100%;height: 100%;"alt="">
+                            </div>
+
+                            <div class="content">
+                                Sed porttitor lectus nibh. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Sed porttitor lectus nibh. Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Proin eget tortor risus. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Nulla quis lorem ut libero malesuada feugiat. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                            </div>
+
+                            <div class="basic-content">
+                                <p>The corner window forms a place within a place that is a resting point within the large space.</p>
+                            </div>
+
+                            <div class="next-content">
+                                The study area is located at the back with a view of the vast nature. Together with the other buildings, a congruent story has been managed in which the whole has a reinforcing effect on the components. The use of materials seeks connection to the main house, the adjacent stables
+                            </div>
+
+                            <div class="product-user">
+                                <div class="name-image">
+                                    <div class="image">
+                                        <img src="./assets/img/author.jpeg" style="width: 100%;height: 100%;"alt="">                                  
+                                    </div>
+                                    <div class="name">
+                                        <span>Michael Scofield</span>
+                                        <div>Admin</div>
+                                    </div>
+                                </div>
+
+                                <div class="user-connect">
+                                    <div class="cat">
+                                     <strong>Categories:</strong> <span>Food</span> 
+                                    </div>
+                                    <div class="tags">
+                                      <strong>Tags:</strong> <span>All, Trending, Cooking, Healthy Food, Life Style</span>
+                                    </div>
+                                    <div class="social-icon">
+                                        <span><i class="fab fa-facebook-f"></i></span>
+                                        <span><i class="fab fa-twitter"></i></span>
+                                        <span><i class="fab fa-google-plus-g"></i></span>
+                                        <span><i class="fab fa-linkedin-in"></i></span>
+                                        <span><i class="fas fa-envelope"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+           
+            </div>
+        </section>
+    </main>
+    <!-- End-body -->
+
+
+    <!-- start-footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="adress-link-subs">
+                    <div class="row">
+                        <div class="col-lg-4 col-sm-12">
+                            <img src="./assets/img/logo.png" alt="ogani">
+                            <div class="adress-phone-mail">
+                                <p>
+                                    Address: Semed Vurgun Street 110
+                                </p>
+                                <p>
+                                    Phone: +994 50 450 95 55
+                                </p>
+                                <p>
+                                    Email: elmiriu@code.edu.az
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <p class="useful-link">Useful Links</p>
+                            <div class="links">
+
+                                <div class="navbar">
+                                    <a href="">Home</a>
+                                    <a href="">Shop</a>
+                                    <a href="">Blog</a>
+                                    <a href="">Contact</a>
+
+                                </div>
+                                <div class="ourselves-link">
+                                    <a href="">Who We Are</a>
+                                    <a href="">Our Services</a>
+                                    <a href="">Projects</a>
+                                    <a href="">Innovation</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-12">
+                            <p class="join">Join Our Newsletter Now</p>
+                            <div class="get-email">
+                                Get E-mail updates about our latest shop and special offers.
+                            </div>
+
+                            <input type="email" placeholder="Enter your Email...">
+                            <button id="subscribe">SUBSCRIBE</button>
+
+                            <div class="sociall">
+                                <div class="face"><i class="fab fa-facebook-f"></i></div>
+                                <div class="insta"><i class="fab fa-instagram"></i></div>
+                                <div class="twitt"><i class="fab fa-twitter"></i></div>
+                                <div class="pinter"><i class="fab fa-pinterest"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </footer>
+    <!-- end-footer -->
+
+
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <!-- Jquery start -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Jquery start -->
+
+
+    <script src="https://kit.fontawesome.com/ad811518ca.js" crossorigin="anonymous"></script>
+
+    <script src="./assets/js/blogdetail.js"></script>
+</body>
+
+</html>
