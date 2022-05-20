@@ -1,8 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700&family=Dosis:wght@600&display=swap");
-html {
-  height: 2000px;
-}
-
 * {
   font-family: 'Cairo', sans-serif;
   margin: 0px;
@@ -483,7 +479,16 @@ a {
 }
 
 .phone-adress-opentime-email {
-  padding-top: 30px;
+  padding-top: 70px;
+}
+
+.phone-adress-opentime-email .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 120px;
 }
 
 .phone-adress-opentime-email .phone {
@@ -501,7 +506,7 @@ a {
 
 .phone-adress-opentime-email .phone .title {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 21px;
   padding-left: 36px;
   padding-top: 10px;
 }

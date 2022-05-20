@@ -2,7 +2,6 @@
 $(document).ready(function(){
 
     $(".dropbtns").click(function(){
-      console.log("salam");
       $("#myDropdown").toggle(1000);
     });
   
