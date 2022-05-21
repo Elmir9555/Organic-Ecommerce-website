@@ -129,3 +129,62 @@
 
 
 
+
+
+ //Basket starts
+
+ let products=document.querySelectorAll("#addproduct")
+
+
+
+ let productList=[];
+
+ products.forEach(product => {
+  
+  product.addEventListener("click",function(e){
+   
+    console.log(this);
+
+    let productimage=this.parentNode.parentNode.previousElementSibling.getAttribute("src")
+    let productname=this.parentNode.parentNode.nextElementSibling.childNodes[1].innerText
+    
+   
+    productList.push({
+      image:productimage,
+      name:productname
+
+    });
+
+   
+
+  
+
+    localStorage.setItem("products", JSON.stringify(productList))
+    
+  
+
+    e.preventDefault();
+  });
+  
+  
+
+
+  
+
+
+  // localStorage.setItem("products", JSON.stringify([]))
+  // let products=localStorage.getItem("products")
+
+  // if (localStorage.getItem("products")!=null) {
+ 
+  //   products=JSON.parse(localStorage.getItem("products"))
+ 
+  // }
+  
+  
+ })
+
+ //Basket-End
+
+
+

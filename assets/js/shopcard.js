@@ -73,3 +73,54 @@ plus.addEventListener("click",function(){
 
 
 //increase count
+
+
+//basket-start
+// let products=[];
+
+// if (localStorage.getItem!=null) {
+//   let productss=localStorage.getItem("products")
+
+
+// for (const product of productss) {
+//   `<div class="products-cart">
+//   <div class="image-name">
+//       <div class="img">
+//           <img src="./assets/img/banner.jpeg" style="width: 100%;height: 100%;"alt="">
+//       </div>
+//       <div class="names">
+//           ${product.name}
+//       </div>
+//   </div>
+//   <div class="value-price-count-total">
+//       <div class="price-value">
+//           $55.00
+//       </div>
+//       <div class="count-price">
+//           <span class="minus">
+//               -
+//           </span>
+
+//           <span  class="cnt">
+//            0
+//           </span>
+//           <span class="plus">
+//               +
+//           </span>
+//       </div>
+
+//       <div class="total-value">
+//           $110.00
+//       </div>
+//       <div class="x">
+//           <i class="fas fa-times"></i>
+//       </div>
+//   </div>
+  
+// </div>`
+// }
+  
+// }
+
+
+//end-basket
