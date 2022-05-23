@@ -137,54 +137,104 @@
 
 
 
- let productList=[];
+
+localStorage.setItem("products",JSON.stringify([]));
+let productList=JSON.parse(localStorage.getItem("products"))
+
 
  products.forEach(product => {
   
-  product.addEventListener("click",function(e){
-   
-    console.log(this);
-
-    let productimage=this.parentNode.parentNode.previousElementSibling.getAttribute("src")
-    let productname=this.parentNode.parentNode.nextElementSibling.childNodes[1].innerText
-    
-   
-    productList.push({
-      image:productimage,
-      name:productname
-
-    });
-
-   
-
-  
-
-    localStorage.setItem("products", JSON.stringify(productList))
-    
-  
-
+ product.addEventListener("click",function(e){
     e.preventDefault();
+    let productimage=this.parentNode.parentNode.previousElementSibling.getAttribute("src");
+    let productname=this.parentNode.parentNode.nextElementSibling.childNodes[1].innerText;
+    let productprice=this.parentNode.parentNode.parentNode.lastElementChild.innerText;
+    let productid=this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id");
+    
+    let existproduct=productList.find(m=>m.id==productid);
+
+    if(existproduct==undefined){
+      productList.push({
+        id:productid,
+        image:productimage,
+        name:productname,
+        price:productprice
+   
+      });
+
+      alert("Product Added Success!")
+
+
+
+    
+      
+    }
+
+    else{
+      alert("You have added this Product to your Cart,Please check your basket")
+  
+    }
+
+ 
+    localStorage.setItem("products", JSON.stringify(productList))
+  
   });
-  
-  
 
 
-  
-
-
-  // localStorage.setItem("products", JSON.stringify([]))
-  // let products=localStorage.getItem("products")
-
-  // if (localStorage.getItem("products")!=null) {
- 
-  //   products=JSON.parse(localStorage.getItem("products"))
- 
-  // }
-  
   
  })
 
+
+ 
  //Basket-End
+
+
+
+ //start-favoruites
+
+
+
+let hearticon=document.querySelectorAll("#addheart")
+
+
+localStorage.setItem("FavoriProduct",JSON.stringify([]));
+let favoriList=JSON.parse(localStorage.getItem("FavoriProduct"))
+
+hearticon.forEach(hearticons => {
+  hearticons.addEventListener("click",function(e){
+
+    let favoriImage=this.parentNode.parentNode.previousElementSibling.getAttribute("src");
+    let favoriname=this.parentNode.parentNode.nextElementSibling.childNodes[1].innerText;
+    let favoriprice=this.parentNode.parentNode.parentNode.lastElementChild.innerText;
+    let favoriid=this.parentNode.parentNode.parentNode.parentNode.getAttribute("data-id");
+
+    let existproduct=favoriList.find(m=>m.id==favoriid);
+
+    if(existproduct==undefined){
+      favoriList.push({
+        id:favoriid,
+        image:favoriImage,
+        name:favoriname,
+        price:favoriprice
+   
+      });
+
+      alert("Product Added Success!")
+      
+    }
+
+    else{
+      alert("You have added this Product to your  Favourites page,Please check your Favourites Page")
+  
+    }
+
+    localStorage.setItem("FavoriProduct", JSON.stringify(favoriList))
+    e.preventDefault();
+  })
+});
+
+
+//end-favoruites
 
 
 
