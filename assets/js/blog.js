@@ -1,3 +1,4 @@
+import {favoriCount,basketCount,getCountheart} from "./common.js"
 //header start ALL CATEGORIES dropdown
 $(document).ready(function(){
 
@@ -68,3 +69,10 @@ $(".count").click(function(){
     // $(this).css("background-color","#7fad39");
     // $(this).css("border","none");
 })
+
+let heartcount=document.querySelector(".heart-count")
+favoriCount(heartcount)
+
+
+let basketcount=document.querySelector(".basket-count")
+basketCount(basketcount)

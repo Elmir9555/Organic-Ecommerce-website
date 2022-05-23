@@ -1,3 +1,5 @@
+import {favoriCount,basketCount,getCountheart} from "./common.js"
+
 //header start ALL CATEGORIES dropdown
 $(document).ready(function(){
 
@@ -39,3 +41,10 @@ $(document).ready(function(){
 
 
   //end searchfilter
+
+  let heartcount=document.querySelector(".heart-count")
+favoriCount(heartcount)
+
+
+let basketcount=document.querySelector(".basket-count")
+basketCount(basketcount)

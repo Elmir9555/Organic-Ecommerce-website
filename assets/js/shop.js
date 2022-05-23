@@ -1,3 +1,5 @@
+import {favoriCount,basketCount,getCountheart} from "./common.js"
+
 // Requires jQuery
 
 // Initialize slider:
@@ -2089,3 +2091,11 @@ $(document).ready(function() {
 
 
 })
+
+let heartcount=document.querySelector(".heart-count")
+favoriCount(heartcount)
+
+
+let basketcount=document.querySelector(".basket-count")
+basketCount(basketcount)
+

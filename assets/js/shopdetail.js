@@ -1,3 +1,4 @@
+import {favoriCount,basketCount,getCountheart} from "./common.js"
 //header start ALL CATEGORIES dropdown
 $(document).ready(function(){
 
@@ -104,6 +105,13 @@ plus.addEventListener("click",function(){
 
 
 //increase count
+
+let heartcount=document.querySelector(".heart-count")
+favoriCount(heartcount)
+
+
+let basketcount=document.querySelector(".basket-count")
+basketCount(basketcount)
 
 
 

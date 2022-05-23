@@ -1,3 +1,6 @@
+import {getCount} from "./common.js"
+import {favoriCount,basketCount,getCountheart} from "./common.js"
+
 //header start ALL CATEGORIES dropdown
 $(document).ready(function(){
 
@@ -84,11 +87,13 @@ removeall.addEventListener("click",function(e){
   localStorage.clear();
   window.location.reload();
 })
-// let productss=[];
-if (localStorage.getItem!=null) {
+
+let productss=[];
+if (JSON.parse(localStorage.getItem!=null)) {
    productss= JSON.parse(localStorage.getItem("products"))
    
 }
+
 
 
 
@@ -135,7 +140,14 @@ function ShowBasket(){
   
   }
 }
- 
+
+
+let heartcount=document.querySelector(".heart-count")
+favoriCount(heartcount)
+
+
+let basketcount=document.querySelector(".basket-count")
+basketCount(basketcount)
 
 
 

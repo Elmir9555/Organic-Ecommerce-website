@@ -1,3 +1,6 @@
+import {getCount} from "./common.js"
+import {getCountheart} from "./common.js"
+
 //header start ALL CATEGORIES dropdown
   $(document).ready(function(){
 
@@ -135,10 +138,15 @@
 
  let products=document.querySelectorAll("#addproduct")
 
+let count=document.querySelector(".basket-count")
 
 
 
-localStorage.setItem("products",JSON.stringify([]));
+
+if(JSON.parse(localStorage.getItem("products")==null)){
+  localStorage.setItem("products",JSON.stringify([]));
+}
+
 let productList=JSON.parse(localStorage.getItem("products"))
 
 
@@ -177,12 +185,16 @@ let productList=JSON.parse(localStorage.getItem("products"))
 
  
     localStorage.setItem("products", JSON.stringify(productList))
-  
+    count.innerText=getCount(productList)
   });
 
 
   
  })
+
+ count.innerText=getCount(productList)
+
+ 
 
 
  
@@ -196,11 +208,18 @@ let productList=JSON.parse(localStorage.getItem("products"))
 
 let hearticon=document.querySelectorAll("#addheart")
 
+if(JSON.parse(localStorage.getItem("FavoriProduct"))==null){
+  localStorage.setItem("FavoriProduct",JSON.stringify([]));
+}
 
-localStorage.setItem("FavoriProduct",JSON.stringify([]));
 let favoriList=JSON.parse(localStorage.getItem("FavoriProduct"))
+let heartcount=document.querySelector(".heart-count")
+
 
 hearticon.forEach(hearticons => {
+
+
+
   hearticons.addEventListener("click",function(e){
 
     let favoriImage=this.parentNode.parentNode.previousElementSibling.getAttribute("src");
@@ -228,10 +247,22 @@ hearticon.forEach(hearticons => {
   
     }
 
-    localStorage.setItem("FavoriProduct", JSON.stringify(favoriList))
+  
+
+    
+
+
+
+  localStorage.setItem("FavoriProduct", JSON.stringify(favoriList))
+  heartcount.innerText=getCountheart(favoriList)
+
     e.preventDefault();
   })
 });
+
+heartcount.innerText=getCountheart(favoriList)
+
+
 
 
 //end-favoruites
