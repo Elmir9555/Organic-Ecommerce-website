@@ -268,4 +268,20 @@ heartcount.innerText=getCountheart(favoriList)
 //end-favoruites
 
 
+let prices=JSON.parse(localStorage.getItem("products"));
+console.log(prices);
+
+let arr=prices.map(m=>m.price)
+console.log(arr);
+
+let sum=0;
+for (let i = 0; i < arr.length; i++) {
+  
+  sum+=arr[i];
+
+}
+console.log(sum);
+
+
+
 

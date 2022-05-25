@@ -43,5 +43,7 @@ favoriCount(heartcount)
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
 
+let countfavo=document.querySelector(".product-count strong")
+countfavo.innerText=localStorage.getItem("FavoriProduct").length
 
 

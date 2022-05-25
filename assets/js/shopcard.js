@@ -84,12 +84,13 @@ $(document).on("click",".minus",function(e){
 let cart=document.querySelector(".cart .container")
 let removeall=document.querySelector(".all-remove button")
 removeall.addEventListener("click",function(e){
-  localStorage.clear();
+  // localStorage.clear();
+  localStorage.removeItem("products")
   window.location.reload();
 })
 
 let productss=[];
-if (JSON.parse(localStorage.getItem!=null)) {
+if (JSON.parse(localStorage.getItem("products")!=null)) {
    productss= JSON.parse(localStorage.getItem("products"))
    
 }
@@ -153,3 +154,4 @@ basketCount(basketcount)
 
 
 //end-basket
+
