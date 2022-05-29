@@ -1,6 +1,14 @@
-import {favoriCount,basketCount,getCountheart} from "./common.js"
+import {favoriCount,basketCount,getCountheart, searchfilterdropdown,dropdowns} from "./common.js"
 
-// Requires jQuery
+//header start ALL CATEGORIES dropdown
+dropdowns();
+//header end ALL CATEGORIES dropdown
+
+//start searchfilter
+searchfilterdropdown();
+//end searchfilter
+
+
 
 // Initialize slider:
 $(document).ready(function() {
@@ -34,9 +42,7 @@ $(document).ready(function() {
         values[1]);
     });
   });
-  
-  
-  
+
   // https://refreshless.com/nouislider/
   /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
   (function(factory) {
@@ -2005,46 +2011,9 @@ $(document).ready(function() {
 })
 
 
-//header start ALL CATEGORIES dropdown
-$(document).ready(function(){
-
-    $(".dropbtns").click(function(){
-      $("#myDropdown").toggle(1000);
-    });
-  
-  });
-  
 
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtns')) {
-      var dropdowns = document.getElementsByClassName("dropdown-contents");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
-
-  //header end ALL CATEGORIES dropdown
-
-   //start searchfilter
-
-   $(document).ready(function(){
-
-    $("#all-categ").click(function(){
-      $(".dropdown-content-cate").toggle(800);
-     
-    })
-   });
- 
- 
-   //end searchfilter
-
+//animation icon
 $(document).ready(function() {
     $("#default").click(function() {
         $(".sort-content").toggle();
@@ -2091,11 +2060,14 @@ $(document).ready(function() {
 
 
 })
+//animation icon
 
+
+//basketcount
 let heartcount=document.querySelector(".heart-count")
 favoriCount(heartcount)
 
-
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
+//basketcount
 

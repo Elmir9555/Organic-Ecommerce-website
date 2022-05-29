@@ -1,60 +1,23 @@
-import {favoriCount,basketCount,getCountheart} from "./common.js"
+import {favoriCount,basketCount,getCountheart, dropdowns,searchfilterdropdown} from "./common.js"
 //header start ALL CATEGORIES dropdown
-$(document).ready(function(){
-
-    $(".dropbtns").click(function(){
-      $("#myDropdown").toggle(1000);
-    });
-  
-  });
-  
+dropdowns();
+//header end ALL CATEGORIES dropdown
 
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtns')) {
-      var dropdowns = document.getElementsByClassName("dropdown-contents");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+//start searchfilter
+searchfilterdropdown();
+//end searchfilter
 
-
-  //header end ALL CATEGORIES dropdown
-
-
-  //start searchfilter
-
-  $(document).ready(function(){
-
-   $("#all-categ").click(function(){
-     $(".dropdown-content-cate").toggle(800);
-    
-   })
-  });
-
-
-  //end searchfilter
-
-
+//tab-menu
 $(document).ready(function(){
   $("span").click(function(){
     $(".active").removeClass("active");
     $(this).addClass("active");
   })
-
- 
-
 })
-
 
 let btn=document.querySelectorAll(".center span")
 let content=document.querySelectorAll(".tab-menu .description")
-
 
 btn.forEach(btns=>{
   btns.addEventListener("click",function(){
@@ -71,19 +34,15 @@ btn.forEach(btns=>{
    
   })
 })
+//tab-menu
 
 
 //increase count
-
 let minus=document.querySelector(".minus");
 let plus=document.querySelector(".plus");
 let i=document.querySelector(".cnt");
-console.log(i);
 let count = 0;
 i.innerText=count;
-
-console.log(i);
-
 
 minus.addEventListener("click",function(){
   if(count==0){
@@ -95,23 +54,21 @@ minus.addEventListener("click",function(){
   }
 })
 
-
 plus.addEventListener("click",function(){
   count++;
   i.innerText=count;
 
 })
-
-
-
 //increase count
 
+
+//basket count
 let heartcount=document.querySelector(".heart-count")
 favoriCount(heartcount)
 
-
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
+//basket count
 
 
 

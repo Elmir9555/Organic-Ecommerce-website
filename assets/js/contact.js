@@ -1,49 +1,18 @@
-import {favoriCount,basketCount,getCountheart} from "./common.js"
+import {favoriCount,basketCount,getCountheart,dropdowns,searchfilterdropdown} from "./common.js"
 
 //header start ALL CATEGORIES dropdown
-$(document).ready(function(){
-
-    $(".dropbtns").click(function(){
-      $("#myDropdown").toggle(1000);
-    });
-  
-  });
-  
+dropdowns();
+//header end ALL CATEGORIES dropdown
 
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtns')) {
-      var dropdowns = document.getElementsByClassName("dropdown-contents");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
+//start searchfilter
+searchfilterdropdown();
+ //end searchfilter
 
-
-  //header end ALL CATEGORIES dropdown
-
-
-  //start searchfilter
-
-  $(document).ready(function(){
-
-   $("#all-categ").click(function(){
-     $(".dropdown-content-cate").toggle(800);
-    
-   })
-  });
-
-
-  //end searchfilter
-
-  let heartcount=document.querySelector(".heart-count")
+ //basketcount
+let heartcount=document.querySelector(".heart-count")
 favoriCount(heartcount)
-
 
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
+//basketcount

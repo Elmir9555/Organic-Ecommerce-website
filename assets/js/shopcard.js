@@ -1,90 +1,21 @@
 import {getCount} from "./common.js"
-import {favoriCount,basketCount,getCountheart} from "./common.js"
+import {favoriCount,basketCount,getCountheart,dropdowns,searchfilterdropdown} from "./common.js"
 
 //header start ALL CATEGORIES dropdown
-$(document).ready(function(){
-
-    $(".dropbtns").click(function(){
-      console.log("salam");
-      $("#myDropdown").toggle(1000);
-    });
-  
-  });
-  
+dropdowns();
+//header end ALL CATEGORIES dropdown
 
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtns')) {
-      var dropdowns = document.getElementsByClassName("dropdown-contents");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-
-
-  //header end ALL CATEGORIES dropdown
-
-
-  //start searchfilter
-
-  $(document).ready(function(){
-
-   $("#all-categ").click(function(){
-     $(".dropdown-content-cate").toggle(800);
-    
-   })
-  });
-
-
-  //end searchfilter
-
-
-  //increase count
-
-let minus=document.querySelector(".minus");
-let plus=document.querySelector(".plus");
-let i=document.querySelector(".cnt");
-
-
-
-$(document).on("click",".plus",function(e){
-
-    var count=Number(e.target.parentElement.children[1].innerText)
-   count++;
-   e.target.parentElement.children[1].innerText=count
-
-})
-
-$(document).on("click",".minus",function(e){
-  var count=Number(e.target.parentElement.children[1].innerText)
-  if(count==0){
-    count=0;
-  }
-  else{
-    count--;
-    e.target.parentElement.children[1].innerText=count
-  }
-
-
-})
-
-//increase count
-
-
+//start searchfilter
+searchfilterdropdown();
+//end searchfilter
 
 
 
 //basket-start
-
 let cart=document.querySelector(".cart .container")
 let removeall=document.querySelector(".all-remove button")
 removeall.addEventListener("click",function(e){
-  // localStorage.clear();
   localStorage.removeItem("products")
   window.location.reload();
 })
@@ -92,15 +23,19 @@ removeall.addEventListener("click",function(e){
 let productss=[];
 if (JSON.parse(localStorage.getItem("products")!=null)) {
    productss= JSON.parse(localStorage.getItem("products"))
+  //  let price=productss.map(m=>m.price)
+  //  console.log(price);
+   
    
 }
 
-
-
-
 ShowBasket();
 function ShowBasket(){
+  
   for (const prduct of productss) {
+    let pricecount=prduct.price.replace('$','')
+   
+    
     cart.innerHTML+=` 
     <div class="products-cart">
     <div class="image-name">
@@ -127,9 +62,8 @@ function ShowBasket(){
             +
         </span>
     </div>
-  
     <div class="total-value">
-    ${prduct.price}
+    ${pricecount}
     </div>
     <div class="x">
         <i class="fas fa-times"></i>
@@ -137,8 +71,11 @@ function ShowBasket(){
   </div>
   </div>
     `
+    let countt=document.querySelector(".cnt")
     
+    console.log(countt.innerText*pricecount);
   
+
   }
 }
 
@@ -151,6 +88,28 @@ let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
 
 
+//increase count
+$(document).on("click",".plus",function(e){
+  
+    var count=Number(e.target.parentElement.children[1].innerText)
+   count++;
+   e.target.parentElement.children[1].innerText=count;
+
+})
+
+$(document).on("click",".minus",function(e){
+  var count=Number(e.target.parentElement.children[1].innerText)
+  if(count==0){
+    count=0;
+  }
+  else{
+    count--;
+    e.target.parentElement.children[1].innerText=count
+  }
+
+
+})
+//increase count
 
 
 //end-basket

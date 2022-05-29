@@ -1,6 +1,17 @@
-import {favoriCount,basketCount,getCountheart} from "./common.js"
-let fav=document.querySelector(".products .row")
+import {favoriCount,basketCount,getCountheart,dropdowns,searchfilterdropdown} from "./common.js"
 
+//header start ALL CATEGORIES dropdown
+dropdowns();
+//header end ALL CATEGORIES dropdown
+
+
+//start searchfilter
+searchfilterdropdown();
+//end searchfilter
+
+
+//addproduct via localstorage
+let fav=document.querySelector(".products .row")
 let favories=[];
 if (localStorage.getItem!=null) {
    favories= JSON.parse(localStorage.getItem("FavoriProduct"))
@@ -8,7 +19,6 @@ if (localStorage.getItem!=null) {
 }
 
 ShowFavoruites();
-
 function ShowFavoruites() {
     for (const favs of favories) {
         fav.innerHTML+=`  <div class="col-lg-3 col-sm-12">
@@ -34,16 +44,38 @@ function ShowFavoruites() {
     }
    
 }
+//addproduct via localstorage
 
 
+
+//favoriproduct count 
 let heartcount=document.querySelector(".heart-count")
 favoriCount(heartcount)
 
-
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
+//favoriproduct count 
 
+
+//rightcorner favoriproduct count 
 let countfavo=document.querySelector(".product-count strong")
-countfavo.innerText=localStorage.getItem("FavoriProduct").length
+countfavo.innerText=JSON.parse(localStorage.getItem("FavoriProduct")).length
+//rightcorner favoriproduct count 
+
+//remove-all product
+// let removeall=document.querySelector("#remove-all");
+// if(JSON.parse(localStorage.getItem("FavoriProduct")==[])){
+//     removeall.style.display="none"
+// }
+// else{
+//     removeall.style.display="block"
+// }
+
+removeall.addEventListener("click",function(e) {
+    e.preventDefault();
+    localStorage.removeItem("FavoriProduct");
+    window.location.reload();
+})
+//remove-all product
 
 

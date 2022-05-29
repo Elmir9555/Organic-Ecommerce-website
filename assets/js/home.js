@@ -1,50 +1,20 @@
 import {getCount} from "./common.js"
-import {getCountheart} from "./common.js"
+import {getCountheart,dropdowns,searchfilterdropdown} from "./common.js"
 
 //header start ALL CATEGORIES dropdown
-  $(document).ready(function(){
-
-    $(".dropbtns").click(function(){
-      console.log("salam");
-      $("#myDropdown").toggle(1000);
-    });
-  
-  });
-  
+  dropdowns();
+//header end ALL CATEGORIES dropdown
 
 
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtns')) {
-      var dropdowns = document.getElementsByClassName("dropdown-contents");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
 
 
-  //header end ALL CATEGORIES dropdown
+//start searchfilterdropdown
+  searchfilterdropdown();
+//end searchfilterdropdown
 
 
-  //start searchfilter
-
-  $(document).ready(function(){
-
-   $("#all-categ").click(function(){
-     $(".dropdown-content-cate").toggle(800);
-    
-   })
-  });
-
-
-  //end searchfilter
 
   //owl-carousel start
-  
   $('.owl-carousel').owlCarousel({
     loop:true,
     margin:10,
@@ -76,9 +46,6 @@ import {getCountheart} from "./common.js"
   let catnames =document.querySelectorAll(".category-name div")
  let content = document.querySelectorAll(".product-image .row")
 
- 
-
-
   catnames.forEach(catname => {
     catname.addEventListener("click",function(){ 
         
@@ -106,9 +73,6 @@ import {getCountheart} from "./common.js"
 
 
  //start sliders col-6
-
-
-
  $('.owl-carousel').owlCarousel({
 
   nav:true,
@@ -127,7 +91,6 @@ import {getCountheart} from "./common.js"
       }
   }
 })
- 
  //end sliders col-6
 
 
@@ -135,12 +98,8 @@ import {getCountheart} from "./common.js"
 
 
  //Basket starts
-
- let products=document.querySelectorAll("#addproduct")
-
+let products=document.querySelectorAll("#addproduct")
 let count=document.querySelector(".basket-count")
-
-
 
 
 if(JSON.parse(localStorage.getItem("products")==null)){
@@ -148,7 +107,6 @@ if(JSON.parse(localStorage.getItem("products")==null)){
 }
 
 let productList=JSON.parse(localStorage.getItem("products"))
-
 
  products.forEach(product => {
   
@@ -166,7 +124,8 @@ let productList=JSON.parse(localStorage.getItem("products"))
         id:productid,
         image:productimage,
         name:productname,
-        price:productprice
+        price:productprice,
+        count:1
    
       });
 
@@ -180,7 +139,6 @@ let productList=JSON.parse(localStorage.getItem("products"))
 
     else{
       alert("You have added this Product to your Cart,Please check your basket")
-  
     }
 
  
@@ -193,19 +151,11 @@ let productList=JSON.parse(localStorage.getItem("products"))
  })
 
  count.innerText=getCount(productList)
-
- 
-
-
- 
  //Basket-End
 
 
 
  //start-favoruites
-
-
-
 let hearticon=document.querySelectorAll("#addheart")
 
 if(JSON.parse(localStorage.getItem("FavoriProduct"))==null){
@@ -214,7 +164,6 @@ if(JSON.parse(localStorage.getItem("FavoriProduct"))==null){
 
 let favoriList=JSON.parse(localStorage.getItem("FavoriProduct"))
 let heartcount=document.querySelector(".heart-count")
-
 
 hearticon.forEach(hearticons => {
 
@@ -261,26 +210,10 @@ hearticon.forEach(hearticons => {
 });
 
 heartcount.innerText=getCountheart(favoriList)
-
-
-
-
 //end-favoruites
 
 
-let prices=JSON.parse(localStorage.getItem("products"));
-console.log(prices);
 
-let arr=prices.map(m=>m.price)
-console.log(arr);
-
-let sum=0;
-for (let i = 0; i < arr.length; i++) {
-  
-  sum+=arr[i];
-
-}
-console.log(sum);
 
 
 
