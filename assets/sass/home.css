@@ -64,6 +64,7 @@ a {
           justify-content: space-between;
   width: 150px;
   padding-right: 20px;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .header-first-part .right-first-header .exchange-login-social ul .social a {
@@ -140,6 +141,17 @@ a {
   font-size: 14px;
   margin-left: 5px;
   cursor: pointer;
+}
+
+.header-first-part .right-first-header .exchange-login-social ul .login .login-icon span a {
+  text-decoration: none;
+  color: black;
+}
+
+.header-first-part .right-first-header .exchange-login-social ul .login .login-icon span a:hover {
+  color: #7fad39;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 
 .header-second-part {
