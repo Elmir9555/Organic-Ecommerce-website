@@ -13,7 +13,7 @@ searchfilterdropdown();
 //addproduct via localstorage
 let fav=document.querySelector(".products .row")
 let favories=[];
-if (localStorage.getItem!=null) {
+if (JSON.parse(localStorage.getItem("FavoriProduct")!=null)) {
    favories= JSON.parse(localStorage.getItem("FavoriProduct"))
    
 }
@@ -51,10 +51,12 @@ function ShowFavoruites() {
 //favoriproduct count 
 let heartcount=document.querySelector(".heart-count")
 favoriCount(heartcount)
+//favoriproduct count 
 
+//Basket count 
 let basketcount=document.querySelector(".basket-count")
 basketCount(basketcount)
-//favoriproduct count 
+//Basket count 
 
 
 //rightcorner favoriproduct count 
@@ -63,18 +65,21 @@ countfavo.innerText=JSON.parse(localStorage.getItem("FavoriProduct")).length
 //rightcorner favoriproduct count 
 
 //remove-all product
-// let removeall=document.querySelector("#remove-all");
-// if(JSON.parse(localStorage.getItem("FavoriProduct")==[])){
-//     removeall.style.display="none"
-// }
-// else{
-//     removeall.style.display="block"
-// }
+let removeall=document.querySelector("#remove-all");
+if((localStorage.getItem("FavoriProduct")!=[])){
+    removeall.style.display="block"
+}
+else{
+    removeall.style.display="none"
+}
+
+
 
 removeall.addEventListener("click",function(e) {
     e.preventDefault();
     localStorage.removeItem("FavoriProduct");
     window.location.reload();
+
 })
 //remove-all product
 

@@ -112,6 +112,8 @@ let productList=JSON.parse(localStorage.getItem("products"))
   
  product.addEventListener("click",function(e){
     e.preventDefault();
+
+    
     let productimage=this.parentNode.parentNode.previousElementSibling.getAttribute("src");
     let productname=this.parentNode.parentNode.nextElementSibling.childNodes[1].innerText;
     let productprice=this.parentNode.parentNode.parentNode.lastElementChild.innerText;
