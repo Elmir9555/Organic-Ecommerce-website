@@ -29,3 +29,19 @@ basketCount(basketcount)
 let countfavo=document.querySelector(".product-count strong")
 countfavo.innerText=JSON.parse(localStorage.getItem("FavoriProduct")).length
 //rightcorner favoriproduct count 
+
+
+$(document).ready(function(){
+    $("#default").click(function() {
+        $(".sort-content").toggle();
+
+        if ($(".sort-content").css("display") == "block") {
+           $("#icon").css("transform","rotate(-180deg)")
+           $("#icon").css("transition","all 0.5s")
+
+        }
+        else{
+            $("#icon").css("transform","rotate(0deg)")
+        }
+    });
+})
