@@ -2,7 +2,7 @@
 
 $primaryBtn:#7fad39;
 html{
-    height:1500px;
+    
 }
 *{
     font-family: 'Cairo', sans-serif;
@@ -484,10 +484,6 @@ a{
 //End-header
 
 
-
-
-
-
 //start-body
 
 .background-potatoes{
@@ -507,9 +503,13 @@ a{
             font-size:40px;
             color: white;
             height:45px;
+            letter-spacing: 1px;
+            padding-left: 10px;
+            
+           
         }
         span{
-            padding-left: 55px;
+            padding-left: 35px;
             color:white;
 
             a{
@@ -527,287 +527,56 @@ a{
     }
 }
 
-.filter-product{
 
-    margin-top: 100px;
-    .filter{
-
-        .cate{
-            p{
-                font-weight:bold;
-                font-size:30px;
-            }
-    
-            a{
-                text-decoration: none;
-                color: black;
-                display: block;
-                font-weight:300;
-                line-height:35px;
-    
-                &:hover{
-                    color: $primaryBtn;
-                    transition: all 0.2s;
-                }
-            }
-        }
-
-        .price{
-
-            padding-top:30px;
-            .name{
-
-                font-weight: bold;
-                font-size: 25px;
-            }
-            
-           /* This line can be removed it was just for display on CodePen: */
-  
-  .slider-labels {
-    margin-top: 10px;
-  }
-  
-  /* Functional styling;
-   * These styles are required for noUiSlider to function.
-   * You don't need to change these rules to apply your design.
-   */
-  .noUi-target,.noUi-target * {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -ms-touch-action: none;
-    touch-action: none;
-    -ms-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  
-  .noUi-target {
-    position: relative;
-    direction: ltr;
-  }
-  
-  .noUi-base {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-  /* Fix 401 */
-  }
-  
-  .noUi-origin {
-    position: absolute;
-    right: 0;
-    top: 0;
-    left: 0;
-    bottom: 0;
-  }
-  
-  .noUi-handle {
-    position: relative;
-    z-index: 1;
-  }
-  
-  .noUi-stacking .noUi-handle {
-  /* This class is applied to the lower origin when
-     its values is > 50%. */
-    z-index: 10;
-  }
-  
-  .noUi-state-tap .noUi-origin {
-    -webkit-transition: left 0.3s,top .3s;
-    transition: left 0.3s,top .3s;
-  }
-  
-  .noUi-state-drag * {
-    cursor: inherit !important;
-  }
-  
-  /* Painting and performance;
-   * Browsers can paint handles in their own layer.
-   */
-  .noUi-base,.noUi-handle {
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
-  }
-  
-  /* Slider size and handle placement;
-   */
-  .noUi-horizontal {
-    height: 4px;
-    width: 250px;
-  }
-  
-  .noUi-horizontal .noUi-handle {
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
-    left: -7px;
-    top: -7px;
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2)
-  }
-  
-  /* Styling;
-   */
-  .noUi-background {
-    background: #D6D7D9;
-  }
-  
-  .noUi-connect {
-    background:  $primaryBtn;
-    -webkit-transition: background 450ms;
-    transition: background 450ms;
-  }
-  
-  .noUi-origin {
-    border-radius: 2px;
-  }
-  
-  .noUi-target {
-    border-radius: 2px;
-  }
-  
-  .noUi-target.noUi-connect {
-  }
-  
-  /* Handles and cursors;
-   */
-  .noUi-draggable {
-    cursor: w-resize;
-  }
-  
-  .noUi-vertical .noUi-draggable {
-    cursor: n-resize;
-  }
-  
-  .noUi-handle {
-    cursor: default;
-    -webkit-box-sizing: content-box !important;
-    -moz-box-sizing: content-box !important;
-    box-sizing: content-box !important;
-  }
-  
-  .noUi-handle:active {
-    border: 8px solid #345DBB;
-    border: 8px solid rgba(53,93,187,0.38);
-    -webkit-background-clip: padding-box;
-    background-clip: padding-box;
-    left: -14px;
-    top: -14px;
-  }
-  
-  /* Disabled state;
-   */
-  [disabled].noUi-connect,[disabled] .noUi-connect {
-    background: #B8B8B8;
-  }
-  
-  [disabled].noUi-origin,[disabled] .noUi-handle {
-    cursor: not-allowed;
-  }
-        }  
-        
-        .colors{
-            padding-top: 25px;
-            .name{
-                font-weight: bold;
-                font-size: 25px;
-            }
-
-            .color-filter{
-                display:flex;
-                gap: 60px;
-
-                .left,.right{
-                    .color-white {
-                        display:flex;
-                        padding-top: 20px;
-                        
-                        a{
-                            color: black;
-                            text-decoration: none;
-                            font-weight: 300;
-                            font-size:16px;
-                            margin-left:10px;
-                          
-                        }
-                        .white{
-                            width:14px;
-                            height: 14px;
-                            border-radius: 14px;
-                            border: none;
-                        }
-
-                       
-                    }
-                }
-
-               
-            }
-        }
-      
-        .popular-size {
-            padding-top: 50px;
-            .name{
-                font-weight: bold;
-                font-size: 25px;
-            }
-        }
-    }
-
+.favories{
+    padding-top: 30px;
     .sale-off{
+        text-align: center;
         p{
-            font-size: 37px;
+            font-size: 33px;
             font-weight: bold;
-            &::after{
-                content: "";
-                display: block;
-                width: 125px;
-                height: 4px;
-                background-color: $primaryBtn;
-            }
+        
+         
         }
     }
-
+    
     .sale-products{
         
         .picture{
             height: 270px;
             width: 270px;           
            position:relative;
-
+    
            a{
                color: black;
            }
-
+    
            
-
+    
            &:hover{
             transition: all 0.5s;
            
             .icons{
                 div{
                     display: block;
-
+    
                 }
               
                 
             }
            }
-
+    
           
-
+    
            .icons{
                display: flex;
                gap: 20px;
                position:absolute;
                bottom:20px;
                left: 60px;
-
+    
                
-
+    
                .detail-icon{
                    i{
                        padding-left:5px;
@@ -821,7 +590,7 @@ a{
                .heart-icon{
                 padding-left: 12px;
                }
-
+    
                div{
                    border: 1px solid rgba(0,0,0,0.1);
                    width: 39px;
@@ -837,23 +606,23 @@ a{
                        background-color:$primaryBtn;
                        cursor: pointer;
                        
-
+    
                        i{
                            transform:rotate(360deg);
                            color:white;
                            transition: all 0.5s;
                        }
                    }
-
+    
                    
-
+    
                    i{
                        font-size:13px;
                        
                    }
                }
            }
-
+    
            .cate-name {
                text-align: center;
                padding-top:10px;
@@ -861,11 +630,11 @@ a{
                font-size:16px;
                height:20px;
            }
-
+    
            .name {
                text-align: center;
                padding-top:15px;
-
+    
                a{
                    text-decoration:none;
                    color:black;
@@ -876,7 +645,7 @@ a{
                text-align: center;
                font-size: 16px;
                letter-spacing:1px;
-
+    
                span{
                    text-decoration: line-through;
                    font-weight: 300;
@@ -884,18 +653,18 @@ a{
                    margin-left:10px;
                    color: rgba(0, 0, 0, 0.3);
                }
-
+    
              }
            
           
         }
-
+    
         .owl-nav{
             text-align: center;
             padding-top: 20px;
-
+    
         }
-
+    
         .owl-next{
           
             margin-left: 30px;
@@ -905,15 +674,15 @@ a{
                 width: 30px;
                 height: 30px;
                 border-radius:30px;
-
+    
                 &:hover{
                     background-color:$primaryBtn;
                     color: white;
-
+    
                 }
             } 
         }
-
+    
         .owl-prev{
            
             span{
@@ -924,26 +693,26 @@ a{
                 border-radius:30px;
              
                
-
+    
                 &:hover{
                     background-color:$primaryBtn;
                     color: white;
                    
-
+    
                 }
             } 
         }
     }
-
+    
     .sort-by-product-count{
         display: flex;
         justify-content: space-between;
         .sortby{
             span{
                 font-weight: 200;
-
+    
             }
-
+    
             #default{
                 border:none;
                 width: 80px;
@@ -951,21 +720,21 @@ a{
                 font-size: 16px;
                 font-weight: bold;
                 background-color:white;
-
+    
                 #icon{
                     font-size: 14px;
                     margin-left:5px;
                     
                 }
             }
-
+    
             .sort-content{
                 width: 80px;
                 min-height: 90px;
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 margin-left: 73px;
                 display:none;
-
+    
                 
                 
                 a{
@@ -976,30 +745,30 @@ a{
                     height: 30px;
                     padding-left: 10px;
                     padding-top: 5px;
-
+    
                     &:hover{
                         background-color:$primaryBtn;
                         color: white;
                         padding-left: 10px;
-
+    
                     }
                 }
             }
         }
-
+    
         .product-count{
             span{
                
                 color: rgba(0, 0, 0, 0.2);
                 font-size: 16px;
                 margin-left: 10px;
-
+    
             }
         }
     }
-
+    
     .products{
-
+    
         margin-top: 40px;
         
         .picture{
@@ -1007,35 +776,35 @@ a{
             width: 270px;           
            position:relative;
            margin-bottom: 80px;
-
+    
            a{
                color: black;
            }
-
+    
            &:hover{
             transition: all 0.5s;
            
             .icons{
                 div{
                     display: block;
-
+    
                 }
               
                 
             }
            }
-
+    
           
-
+    
            .icons{
                display: flex;
                gap: 20px;
                position:absolute;
                bottom:20px;
                left: 60px;
-
+    
                
-
+    
                .detail-icon{
                    i{
                        padding-left:5px;
@@ -1049,7 +818,7 @@ a{
                .heart-icon{
                 padding-left: 12px;
                }
-
+    
                div{
                    border: 1px solid rgba(0,0,0,0.1);
                    width: 39px;
@@ -1065,27 +834,27 @@ a{
                        background-color:$primaryBtn;
                        cursor: pointer;
                        
-
+    
                        i{
                            transform:rotate(360deg);
                            color:white;
                            transition: all 0.5s;
                        }
                    }
-
+    
                    
-
+    
                    i{
                        font-size:13px;
                        
                    }
                }
            }
-
+    
            .name {
                text-align: center;
                padding-top:15px;
-
+    
                a{
                    text-decoration:none;
                    color:black;
@@ -1096,20 +865,20 @@ a{
                text-align: center;
                font-size: 16px;
                letter-spacing:1px;
-
+    
            }
            
           
         }
     }
-
+    
     .pagination{
         display:flex;
         justify-content:center;
         gap: 27px;
         padding-left: 20px;
         padding-top: 20px;
-
+    
         div{
             width: 30px;
             height: 30px;
@@ -1121,7 +890,7 @@ a{
             font-size:14px;
             padding-top: 3px;
             font-weight: bold;
-
+    
             &:hover {
                 color: white;
                 background-color:$primaryBtn;
@@ -1129,21 +898,21 @@ a{
                 border:none;
                 padding-left: 10px;
                 transition: all 0.7s;
-
+    
             }
             &:focus{
                 color: $primaryBtn;
             }
-
+    
             
         }
-
+    
         .active{
             color: white;
             background-color:$primaryBtn;
             border: none;
         }
-
+    
         
     }
 }
@@ -1151,10 +920,6 @@ a{
 
 
 //end-body
-
-
-
-
 
 
 
