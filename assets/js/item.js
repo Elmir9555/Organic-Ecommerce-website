@@ -1,21 +1,31 @@
-let item=JSON.parse(localStorage.getItem("products"));
+let item = JSON.parse(localStorage.getItem("products"));
+console.log(item);
 
-let prcs=item.map(p=>p.price)
+
+let prcs = item.map(p => p.price)
+
 
 let prcss=prcs.map(a=>a.slice(1))
 let prcsss=prcss.map(Number)
 
 
 
-let tot=document.querySelector(".price").children[1];
+let totalsum = document.querySelector(".price").children[1];
+let totalsumm = Number(totalsum);
 
-console.log(tot);
-let sum=0;
+
+
+
+let pricesumm=0;
 for (let i = 0; i < prcsss.length; i++) {
-    
-    sum+=prcsss[i];
+
+    pricesumm += prcsss[i];
     
 }
 
 
-tot.innerText=sum+".00$"
+totalsum.innerText = pricesumm + ".00$"
+
+
+
+
